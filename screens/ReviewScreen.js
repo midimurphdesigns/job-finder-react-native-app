@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, Platform } from "react-native";
 import { Button } from "react-native-elements";
 
 export default class ReviewScreen extends Component {
   static navigationOptions = props => {
-    const { navigation } = props;
-    const { navigate } = navigation;
+    const { navigate } = props.navigation;
     return {
       headerTitle: "Review Jobs",
       headerRight: (
@@ -15,7 +14,10 @@ export default class ReviewScreen extends Component {
           backgroundColor="rgba(0,0,0,0)"
           color="rgba(0, 125, 125, 1)"
         />
-      )
+      ),
+      style: {
+        marginTop: Platform.OS === "android" ? 24 : 0
+      }
     };
   };
 
