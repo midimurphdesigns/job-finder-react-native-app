@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet } from "react-native";
 import Slides from "../components/Slides";
+import _ from "lodash";
 
 const SLIDE_DATA = [
   { text: "Welcome to JobApp", color: "#03A9F4" },
@@ -9,6 +10,8 @@ const SLIDE_DATA = [
 ];
 
 export default class WelcomeScreen extends Component {
+  state = { token: null };
+
   onSlidesComplete = () => {
     this.props.navigation.navigate("auth");
   };
