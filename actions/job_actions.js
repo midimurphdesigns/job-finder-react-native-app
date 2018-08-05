@@ -26,7 +26,9 @@ export const fetchJobs = region => async dispatch => {
     const url = buildJobsUrl(zip);
     let { data } = await axios.get(url);
     dispatch({ type: FETCH_JOBS, payload: data });
-    console.log(data);
+    console.log('====================================');
+    console.log('this is the data', data);
+    console.log('====================================');
   } catch (e) {
     console.error(e);
   }
