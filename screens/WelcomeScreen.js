@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import Slides from "../components/Slides";
 
 const SLIDE_DATA = [
@@ -10,7 +10,7 @@ const SLIDE_DATA = [
 
 export default class WelcomeScreen extends Component {
   onSlidesComplete = () => {
-    this.props.navigation.navigate('auth');
+    this.props.navigation.navigate("auth");
   };
 
   render() {
