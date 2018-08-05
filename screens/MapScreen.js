@@ -18,7 +18,6 @@ export default class MapScreen extends Component {
   }
 
   onRegionChangeComplete = region => {
-    console.log(region);
     this.setState({ region });
   };
 
